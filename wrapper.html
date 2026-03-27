@@ -22,13 +22,11 @@ var GAS_BASE_URL='https://script.google.com/macros/s/AKfycbwEN1YHqdtRBTzrDeTubpQ
 var LIFF_ID='2009617550-Sv1tdNVI';
 
 var params=new URLSearchParams(window.location.search);
-var store=params.get('store')||'';
 var page=params.get('page')||'';
 
 var src=GAS_BASE_URL;
 var gp=['source=LINE'];
 if(page)gp.push('page='+encodeURIComponent(page));
-if(store)gp.push('store='+encodeURIComponent(store));
 src+='?'+gp.join('&');
 document.getElementById('frame').src=src;
 
